@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Amada</title>
+<meta name="viewport" content="width=device-width initial-scale=1">
+<link  rel="stylesheet" href="aboutcss.css">
+</head>
+<body>
+<h1> ABOUT </h1>
+<p id="b">
+Amada Restaurant was founded by Daniel Joe in 2005 and it's one of the best restaurants in the city. We have a beautiful view that you can see in the pictures section. You can enjoy your coffee by the lake.<br>
+Our chef is Mr. Tomas Keller who's known for his role in Food Network Iron Chef. 
+</p>
+<img src="hel.jpg" alt="image">
+<h2>OPENING HOURS</h2>
+<p id="c"> Mon & Tue 9.00 a.m.- 9.00 p.m.<br>
+Wednesday 9.00 a.m- 10.00p.m.<br>
+Thursday 9.00 a.m.-12.00 p.m.<br>
+Friday 9.00 a.m.-1.00 a.m.<br>
+Saturday 8.00 a.m.-1.00 a.m.<br>
+Sunday 8.00 a.m.- 10.00 p.m.
+</p>
+<img src="back2.jpg" alt="imag" width="60%" height="30%" style="filter: grayscale(100%)">
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{ background-image:url("fundal3.jpg");
+      background-size: cover;
+	  margin-top: 200px;
+	  text-align:center;
+}
+h1 { color:white;
+font-size: 70px;
+text-shadow: 5px 5px #00154D;
+}
+address{ color: #003e7f;
+          font-size: 30px;
+text-shadow: 2px 2px white;	  }
+a {border-style: solid;
+   border-color: #00154D;
+   background-color:#ffffc2;
+   color: #68221F;
+   font-size:20px;
+   margin:20px;
+   text-decoration-line:none;}
+a:hover{ background-color: #24a0ed;
+color: black;}
+.send { border-style: solid;
+   border-color: #00154D;
+   background-color:#ffffc2;
+   color: #68221F;
+   font-size:20px;
+   margin:20px;
+   text-decoration-line:none; }

@@ -1,0 +1,23 @@
+
+img { opacity: 0.5;
+      margin:10px;
+     }
+img:hover{ opacity:0.8;
+           border: 1px solid black;}
+
+body{ text-align: center;
+      background-color:#00021f;
+      padding:50px;
+      font-family: cursive;
+      padding:50px;}
+h2{ background-color:#72a0c1;
+    color: white;
+	text-align: left;
+}
+#c {border-style: solid;
+   border-color: #a8ff8f;
+   background-color:#ffffc2;
+   color: #68221F;
+   font-size:20px;
+   margin:20px;
+   text-decoration-line:none;}

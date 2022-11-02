@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+<meta name="viewport" content="width=device-width initial-scale=1">
+<style>
+body{ font-family: 'Brush Script MT',cursive;
+border: 2px solid #ccc;
+margin: 200px;
+height: 100%;
+color: white;
+	}
+.container{ max-width:1200px;
+            margin:0 auto;
+			padding:30px;
+			}
+.menu{ font-size:14px;
+       }
+.menu-group-heading { 
+       padding-bottom: 20px;
+	   border-bottom: 2px solid #ccc;
+	   }
+.menu-group {
+              display:grid;
+			  padding:10px;
+			  }
+* { 
+    text-align:center;
+	background-color:#00021f;
+}		
+.menu-item{ 
+display: flex;
+            margin-bottom: 10px;
+            }
+.menu-item-image{  width:80px;
+                   height:80px;
+				   object-fit:cover;				 
+                    margin-right: 10px;
+				   margin-left: 200px;
+				   }
+.menu-item-text{ flex-grow:1;
+}
+				   }
+.menu-item-price { margin-left: 100px;
+                  }
+a:hover{ background-color: #24a0ed;
+  border-color: #003e7f;}
+  button { background-color:#72a0c1;
+  border-color:#0000ff;}
+button:hover{  background-color:#002244;
+               color:white;
+			   padding: 10px 20px;}
+.cart { width:250px;
+		text-align:center;
+		border: 1px solid white;
+		overflow-y: scroll;
+		height:100%;
+		}
+.cartImg>img{ width:200px;}
+</style>
+<script type="text/javascript" src="java.js">
+</script>
+</head>
+<body>
+<a href="Restaurant.html" style="float: right; color:white; text-decoration: none; border: 2px solid  #00154D;">HOME</a>
+<div class="container">
+<div class="menu">
+<h2 class="menu-group-heading"> MENU</h2>
+<div class="menu-group">
+   <h3>PASTA</h3>
+     <div class="menu-item" id="item1">
+	     <img class="menu-item-image" src="./images/puttanesca.jpg" alt="puttanesca">
+	      <div class="menu-item-text">
+		    <h3 class="menu-item-heading">
+			   <span class="title">Pasta Puttanesca</span>
+			   <span class="menu-item-price">$12.90</span>
+			</h3>
+			<button onclick="addToCart(item1)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item2">
+	     <img class="menu-item-image" src="./images/bolognese.jpg" alt="puttanesca">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Pasta Bolognese</span>
+			   <span class="menu-item-price">$12.50</span>
+			</h3>
+			<button onclick="addToCart(item2)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item3">
+	     <img class="menu-item-image" src="./images/carbonara.jpg" alt="puttanesca">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Pasta Carbonara</span>
+			   <span class="menu-item-price">$11.30</span>
+			</h3>
+			<button onclick="addToCart(item3)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item" id="item4">
+	     <img class="menu-item-image" src="./images/alfredo.jpg" alt="puttanesca">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Pasta Alfredo</span>
+			   <span class="menu-item-price">$17.90</span>
+			</h3>
+			<button onclick="addToCart(item4)">Add to Cart</button>
+		  </div>
+	  </div>
+</div>
+<div class="menu-group">
+   <h3>SALAD</h3>
+     <div class="menu-item" id="item5">
+	     <img class="menu-item-image" src="./images/guacamole.jpg" alt="guacamole">
+	      <div class="menu-item-text">
+		    <h3 class="menu-item-heading">
+			   <span id="title">Guacamole Salad</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			<button onclick="addToCart(item5)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item6">
+	     <img class="menu-item-image" src="./images/chicken.jpg" alt="chicken">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Chicken Salad</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			<button onclick="addToCart(item6)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item7">
+	     <img class="menu-item-image" src="./images/greek.jpg" alt="greek">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Greek salad</span>
+			   <span class="menu-item-price">$11.00</span>
+			</h3>
+			<button onclick="addToCart(item7)">Add to Cart</button>
+		  </div>
+	  </div>
+	
+</div>
+
+<div class="menu-group">
+   <h3>BURGER</h3>
+     <div class="menu-item" id="item8">
+	     <img class="menu-item-image" src="./images/burger1.jpg" alt="burger">
+	      <div class="menu-item-text">
+		    <h3 class="menu-item-heading">
+			   <span id="title">Cheese Burger</span>
+			   <span class="menu-item-price">$15.00</span>
+			</h3>
+			<button onclick="addToCart(item8)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item9">
+	     <img class="menu-item-image" src="./images/burger2.jpg" alt="burger">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Chicken Burger</span>
+			   <span class="menu-item-price">$14.00</span>
+			</h3>
+			<button onclick="addToCart(item9)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item9">
+	     <img class="menu-item-image" src="./images/veggie.jpg" alt="veggie">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Veggie Burger</span>
+			   <span class="menu-item-price">$11.00</span>
+			</h3>
+			<button onclick="addToCart(item9)">Add to Cart</button>
+		  </div>
+	  </div>
+	
+</div>
+<div class="menu-group">
+   <h3>PIZZA</h3>
+     <div class="menu-item" id="item10">
+	     <img class="menu-item-image" src="./images/mar.jpg" alt="mar">
+	      <div class="menu-item-text">
+		    <h3 class="menu-item-heading">
+			   <span id="title">Margherita</span>
+			   <span class="menu-item-price">$14.90</span>
+			</h3>
+			<button onclick="addToCart(item10)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item11">
+	     <img class="menu-item-image" src="./images/qs.jpg" alt="qs">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Quatro Stagioni</span>
+			   <span class="menu-item-price">$16.50</span>
+			</h3>
+			<button onclick="addToCart(item11)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item12">
+	     <img class="menu-item-image" src="./images/pr.jpg" alt="pf">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Prosciutto E Funghi</span>
+			   <span class="menu-item-price">$15.30</span>
+			</h3>
+			<button onclick="addToCart(item12)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item" id="item13">
+	     <img class="menu-item-image" src="./images/veggie1.jpg" alt="veg">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Vegetariana</span>
+			   <span class="menu-item-price">$14.90</span>
+			</h3>
+			<button onclick="addToCart(item13)">Add to Cart</button>
+		  </div>
+	  </div>
+</div>
+<div class="menu-group">
+   <h3>COCKTAIL DRINKS</h3>
+     <div class="menu-item" id="item14">
+	     <img class="menu-item-image" src="./images/mojito.jpg" alt="mojito">
+	      <div class="menu-item-text">
+		    <h3 class="menu-item-heading">
+			   <span id="title">Mojito</span>
+			   <span class="menu-item-price">$8.50</span>
+			</h3>
+			<button onclick="addToCart(item14)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item15">
+	     <img class="menu-item-image" src="./images/martini.jpg" alt="martini">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Martini</span>
+			   <span class="menu-item-price">$9.50</span>
+			</h3>
+			<button onclick="addToCart(item15)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item " id="item16">
+	     <img class="menu-item-image" src="./images/cuba.jpg" alt="cuba">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Cuba Libre</span>
+			   <span class="menu-item-price">$10.30</span>
+			</h3>
+			<button onclick="addToCart(item16)">Add to Cart</button>
+		  </div>
+	  </div>
+	  <div class="menu-item" id="item17">
+	     <img class="menu-item-image" src="./images/gin.jpg" alt="gin">
+	      <div class="menu-item-text">
+		    <h3>
+			   <span id="title">Gin Tonic</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			<button onclick="addToCart(item17)">Add to Cart</button>
+		  </div>
+	  </div>
+</div>
+</div>
+<div class="cart" id="cart">
+<div class="title">CART</title>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE.html>
+<html>
+<head>
+<style>
+* { background-color:#00021f;}
+.cart { width:250px;
+		text-align:center;
+		float:right;
+		border: 1px solid white;
+		color:white;
+		overflow-y: scroll;
+		height:100%;
+		}
+hr { color: white;}
+.menu-item-image{  width:80px;
+                   height:80px;
+				   object-fit:cover;				 
+                    margin-right: 10px;
+				   margin-left: 200px;
+				   }	
+.menu-item{ 
+            display: flex;
+            margin-bottom: 10px;
+ color: white;}
+button {color: white;}
+h3 { color: white;}
+h2 { color: white;
+    text-align: center;}
+.cartImg> img { 
+           height:200px;
+                }
+button { border-color: white;
+         background-color:#72a0c1;
+		 width: 100px;
+		 height: 30px;
+}		 
+
+</style>
+<script src="java.js" type="text/javascript" ></script>
+</head>
+<body>
+<a href="Restaurant.html" style=" float: right">HOME</a>
+<div class="cart" id="cart">
+<div class="title">CART</div> <hr/>
+<div  class="box" id="title">
+</div>
+   <a href="contact.html">PURCHASE </a>
+</div>
+<h2 > MENU</h2>
+   <h3>PASTA</h3>
+     <div class="menu-item" id="item1">
+	     <img class="menu-item-image" src="./images/puttanesca.jpg" alt="puttanesca">
+		 <div>
+		    <h3>
+			   <span class="title">Pasta Puttanesca</span>
+			   <span class="menu-item-price">$12.90</span>
+			</h3>
+			</div>
+			<button onclick="addToCart(item1)">Add to Cart</button> 
+		 </div>
+	  <div class="menu-item " id="item2">
+	     <img class="menu-item-image" src="./images/bolognese.jpg" alt="puttanesca">
+	    <div>
+		    <h3>
+			   <span id="title">Pasta Bolognese</span>
+			   <span class="menu-item-price">$12.50</span>
+			</h3>
+			</div>
+			<button onclick="addToCart(item2)">Add to Cart</button>
+		  </div>
+	  <div class="menu-item " id="item3">
+	     <img class="menu-item-image" src="./images/carbonara.jpg" alt="puttanesca">
+		 <div>
+		    <h3>
+			   <span id="title">Pasta Carbonara</span>
+			   <span class="menu-item-price">$11.30</span>
+			</h3>
+			</div>
+			<button onclick="addToCart(item3)">Add to Cart</button>
+	  </div>
+	  <div class="menu-item" id="item4">
+	     <img class="menu-item-image" src="./images/alfredo.jpg" alt="puttanesca">
+	      <div>
+		    <h3>
+			   <span id="title">Pasta Alfredo</span>
+			   <span class="menu-item-price">$17.90</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item4)">Add to Cart</button>
+		 
+</div>
+   <h3>SALAD</h3>
+     <div class="menu-item" id="item5">
+	     <img class="menu-item-image" src="./images/guacamole.jpg" alt="guacamole">
+	      <div>
+		    <h3>
+			   <span id="title">Guacamole Salad</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item5)">Add to Cart</button>
+		 
+	  </div>
+	  <div class="menu-item " id="item6">
+	     <img class="menu-item-image" src="./images/chicken.jpg" alt="chicken">
+	      <div >
+		    <h3>
+			   <span id="title">Chicken Salad</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item6)">Add to Cart</button>
+		 
+	  </div>
+	  <div class="menu-item " id="item7">
+	     <img class="menu-item-image" src="./images/greek.jpg" alt="greek">
+	      <div >
+		    <h3>
+			   <span id="title">Greek salad</span>
+			   <span class="menu-item-price">$11.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item7)">Add to Cart</button>
+		
+	
+</div>
+   <h3>BURGER</h3>
+     <div class="menu-item" id="item8">
+	     <img class="menu-item-image" src="./images/burger1.jpg" alt="burger">
+	      <div>
+		    <h3>
+			   <span id="title">Cheese Burger</span>
+			   <span class="menu-item-price">$15.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item8)">Add to Cart</button>
+		
+	  </div>
+	  <div class="menu-item " id="item9">
+	     <img class="menu-item-image" src="./images/burger2.jpg" alt="burger">
+	      <div >
+		    <h3>
+			   <span id="title">Chicken Burger</span>
+			   <span class="menu-item-price">$14.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item9)">Add to Cart</button>
+		
+	  </div>
+	  <div class="menu-item " id="item9">
+	     <img class="menu-item-image" src="./images/veggie.jpg" alt="veggie">
+	      <div>
+		    <h3>
+			   <span id="title">Veggie Burger</span>
+			   <span class="menu-item-price">$11.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item9)">Add to Cart</button>
+		 
+	  </div>
+   <h3>PIZZA</h3>
+     <div class="menu-item" id="item10">
+	     <img class="menu-item-image" src="./images/mar.jpg" alt="mar">
+	      <div>
+		    <h3 >
+			   <span id="title">Margherita</span>
+			   <span class="menu-item-price">$14.90</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item10)">Add to Cart</button>
+		
+	  </div>
+	  <div class="menu-item " id="item11">
+	     <img class="menu-item-image" src="./images/qs.jpg" alt="qs">
+	      <div >
+		    <h3>
+			   <span id="title">Quatro Stagioni</span>
+			   <span class="menu-item-price">$16.50</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item11)">Add to Cart</button>
+		  
+	  </div>
+	  <div class="menu-item " id="item12">
+	     <img class="menu-item-image" src="./images/pr.jpg" alt="pf">
+	      <div >
+		    <h3>
+			   <span id="title">Prosciutto E Funghi</span>
+			   <span class="menu-item-price">$15.30</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item12)">Add to Cart</button>
+		 
+	  </div>
+	  <div class="menu-item" id="item13">
+	     <img class="menu-item-image" src="./images/veggie1.jpg" alt="veg">
+	      <div >
+		    <h3>
+			   <span id="title">Vegetariana</span>
+			   <span class="menu-item-price">$14.90</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item13)">Add to Cart</button>
+	  </div>
+   <h3>COCKTAIL DRINKS</h3>
+     <div class="menu-item" id="item14">
+	     <img class="menu-item-image" src="./images/mojito.jpg" alt="mojito">
+	      <div >
+		    <h3 >
+			   <span id="title">Mojito</span>
+			   <span class="menu-item-price">$8.50</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item14)">Add to Cart</button>
+		
+	  </div>
+	  <div class="menu-item " id="item15">
+	     <img class="menu-item-image" src="./images/martini.jpg" alt="martini">
+	      <div >
+		    <h3>
+			   <span id="title">Martini</span>
+			   <span class="menu-item-price">$9.50</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item15)">Add to Cart</button>
+		  
+	  </div>
+	  <div class="menu-item " id="item16">
+	     <img class="menu-item-image" src="./images/cuba.jpg" alt="cuba">
+	      <div >
+		    <h3>
+			   <span id="title">Cuba Libre</span>
+			   <span class="menu-item-price">$10.30</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item16)">Add to Cart</button>
+		  
+	  </div>
+	  <div class="menu-item" id="item17">
+	     <img class="menu-item-image" src="./images/gin.jpg" alt="gin">
+	      <div >
+		    <h3>
+			   <span id="title">Gin Tonic</span>
+			   <span class="menu-item-price">$10.00</span>
+			</h3>
+			 </div>
+			<button onclick="addToCart(item17)">Add to Cart</button>
+		
+	  </div>
+</body>
+</html>

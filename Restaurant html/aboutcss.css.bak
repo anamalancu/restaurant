@@ -1,0 +1,22 @@
+body{ text-align: center;
+color: white;
+background-color:#00021f;
+padding:50px;
+font-family: cursive;
+border-style: ridge;
+margin:40px;
+border-color: gray;}
+h1{ font-size: 40px;
+text-shadow: 3px 3px #72a0c1;
+}
+#b {font-size: 20px;
+    background-color: #72a0c1;
+}
+h2{text-shadow: 3px 3px #72a0c1;}
+#c{ border-style: ridge;
+     color: #72a0c1;
+     border-width: 5px;
+	 border-color: blue;
+	 text-decoration-line: underline; 
+     text-decoration-style: double;
+	 }
